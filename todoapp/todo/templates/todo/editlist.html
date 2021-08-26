@@ -1,0 +1,9 @@
+<form method="post">
+    {% csrf_token %}
+    <fieldset>
+        <h1>edit list</h1>
+        <input type="text" name="name" id="name" placeholder={{todo_list_name.list_name}}>
+        <input type="submit">
+    </fieldset>
+
+</form>

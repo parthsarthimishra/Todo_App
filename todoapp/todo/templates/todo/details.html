@@ -1,0 +1,10 @@
+<h1>{{todolist.list_name}}</h1>
+<h2><a href="{%url 'todo:item_create' todolist.id %}">create a item</a></h2>
+<ul>
+    {% for item in items_list %}
+    <li>
+        {{item.title}}: {{item.due_date}}, {{item.checked}} <br><a href="{%url 'todo:item_edit' todolist.id item.id %}">EDIT</a><br><a href="{%url 'todo:item_delete' todolist.id item.id %}">DELETE</a>
+    </li>
+    
+    {% endfor %}
+</ul>

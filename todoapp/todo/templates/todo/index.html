@@ -1,0 +1,12 @@
+<h1>TODO APP</h1>
+<h2><a href="/todo/create">CREATE A LIST</a></h2>
+
+{% if todolists %}
+
+    <ul>
+        {% for todolist in todolists %}
+        <li><a href="/todo/{{todolist.id}}">{{todolist.list_name}}</a><br><a href="/todo/edit/{{todolist.id}}">edit</a><br><a href="/todo/delete/{{todolist.id}}">Delete</a></li>
+        {% endfor %}
+    </ul>
+
+{% endif %}
